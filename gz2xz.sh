@@ -1,0 +1,7 @@
+#!/bin/bash
+# AI自动生成：将.gz文件批量转换为.xz文件
+for file in *.gz; do
+  [ -e "$file" ] || continue
+  xzfile="${file%.gz}.xz"
+  gunzip -c "$file" | xz -z - > "$xzfile"
+done
