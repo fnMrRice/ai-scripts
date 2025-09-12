@@ -1,5 +1,5 @@
 #!/bin/bash
-# AI自动生成：将.gz文件批量转换为.xz文件
+# AI自动生成：archive-repack - 将.gz文件批量转换为.xz文件
 for file in *.gz; do
   [ -e "$file" ] || continue
   xzfile="${file%.gz}.xz"
